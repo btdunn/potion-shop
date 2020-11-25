@@ -1,0 +1,27 @@
+.App{
+  display: flex;
+  flex-direction: row;
+}
+
+.shelves{
+  background-color: coral;
+  width: 50vw;
+  height: 100vh;
+}
+
+.right-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.cart{
+  background-color: blueviolet;
+  width: 50vw;
+  height: 40vh;
+}
+
+.shopkeep{
+  background-color: aqua;
+  width: 50vw;
+  height: 60vh;
+}
