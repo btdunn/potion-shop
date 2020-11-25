@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="shelves">
+      <div className="recolor"></div>
 
       </div>
       <div className="right-container">
