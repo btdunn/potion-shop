@@ -10,7 +10,7 @@ function App() {
       </div>
       <div className="right-container">
         <div className="cart">
-
+          <img className="satchel" src="https://www.flaticon.com/svg/static/icons/svg/2743/2743998.svg" alt="satchel"/>
         </div>
         <div className="shopkeep">
           <div className="dialogue-box">
