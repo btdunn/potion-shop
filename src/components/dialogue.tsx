@@ -8,15 +8,21 @@ const Dialogue = () => {
     '...'
   )
 
+  const [counter, setCounter] = useState(0)
+
   const handleClick = (event: MouseEvent) => {
     const options = [
       "hey",
-      "ok"
+      "ok",
+      "sure",
+      "no",
     ]
     
-    for(let i: number = 0; i < options.length; i++){
-      setDialogue(options[i])
-    }
+    // for(let i: number = 0; i < options.length; i++){
+    //   setDialogue(options[i])
+    // }
+    setDialogue(options[counter])
+    setCounter(counter + 1)
   }
 
 
