@@ -4,14 +4,22 @@ import '../App.css';
 
 const Dialogue = () => {
 
-  const [dialogue, setDialogue] = useState([
-    "hey welcome in",
-    "what did you need?"
-  ])
+  const [dialogue, setDialogue] = useState(
+    '...'
+  )
 
   const handleClick = (event: MouseEvent) => {
-    console.log("ok")
+    const options = [
+      "hey",
+      "ok"
+    ]
+    
+    for(let i: number = 0; i < options.length; i++){
+      setDialogue(options[i])
+    }
   }
+
+
 
   return (
     <div onClick={handleClick} className="dialogue-box">
