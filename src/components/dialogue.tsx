@@ -18,9 +18,6 @@ const Dialogue = () => {
       "no",
     ]
     
-    // for(let i: number = 0; i < options.length; i++){
-    //   setDialogue(options[i])
-    // }
     setDialogue(options[counter])
     setCounter(counter + 1)
   }
