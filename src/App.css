@@ -66,3 +66,15 @@
   right: 15px;
   top: 10px;
 }
+
+.triangle-right {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-left: 25px solid hsl(199, 70%, 82%);
+  border-bottom: 12px solid transparent;
+  cursor: pointer;
+}

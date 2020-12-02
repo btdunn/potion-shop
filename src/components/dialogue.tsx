@@ -25,7 +25,8 @@ const Dialogue = () => {
 
 
   return (
-    <div onClick={handleClick} className="dialogue-box">
+    <div className="dialogue-box">
+      <div onClick={handleClick} className="triangle-right"></div>
       <p className="dialogue">
         {dialogue}
       </p>
