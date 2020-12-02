@@ -16,10 +16,13 @@ const Dialogue = () => {
       "ok",
       "sure",
       "no",
+      "...",
     ]
     
-    setDialogue(options[counter])
-    setCounter(counter + 1)
+    if(counter <= 4){
+      setDialogue(options[counter])
+      setCounter(counter + 1)
+    }
   }
 
 
