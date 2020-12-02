@@ -2,7 +2,7 @@ import React, {useState, MouseEvent} from 'react'
 import '../App.css';
 
 
-const Dialogue = () => {
+const Dialogue = ({updateShopkeep}: any) => {
 
   const [dialogue, setDialogue] = useState(
     '...'
@@ -21,6 +21,7 @@ const Dialogue = () => {
     
     if(counter <= 4){
       setDialogue(options[counter])
+      updateShopkeep(counter)
       setCounter(counter + 1)
     }
   }
