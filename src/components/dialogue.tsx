@@ -12,10 +12,10 @@ const Dialogue = ({updateShopkeep}: any) => {
 
   const handleClick = (event: MouseEvent) => {
     const options = [
-      "hey",
-      "ok",
-      "sure",
-      "no",
+      "...hey. Welcome to Masterful Mixtures...",
+      "take a look around. You can drag what you want into your bag...",
+      "top right of the screen, see?",
+      "thanks for shopping!",
       "...",
     ]
     
