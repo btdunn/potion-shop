@@ -41,6 +41,8 @@
 .sign{
   position: absolute;
   margin-left: 25px;
+  font-family: Texturina;
+  font-weight: 800;
 }
 
 .shopkeep{
