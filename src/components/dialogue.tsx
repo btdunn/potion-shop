@@ -31,6 +31,7 @@ const Dialogue = ({updateShopkeep}: any) => {
   return (
     <div className="dialogue-box">
       <div onClick={handleClick} className="triangle-right"></div>
+      <h3 className="dialogue-heading">Shopkeeper</h3>
       <p className="dialogue">
         {dialogue}
       </p>
