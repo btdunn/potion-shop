@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Shopkeeper from './components/shopkeeper'
+import Satchel from './components/satchel'
 
 function App() {
   return (
@@ -10,10 +11,7 @@ function App() {
 
       </div>
       <div className="right-container">
-        <div className="cart">
-          <h1>Welcome to Masterful Mixtures</h1>
-          <img className="satchel" src="https://www.flaticon.com/svg/static/icons/svg/2743/2743998.svg" alt="satchel"/>
-        </div>
+        <Satchel />
         <Shopkeeper />
       </div>
     </div>

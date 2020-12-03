@@ -8,8 +8,8 @@ const Shopkeep = () => {
   
   const [shopkeeper, setShopkeeper] = useState([
     'https://i.imgur.com/Uj7NyNE.png',
-    'https://i.imgur.com/aKNI9rV.png',
     'https://i.imgur.com/6YDjjtp.png',
+    'https://i.imgur.com/aKNI9rV.png',
     'https://i.imgur.com/trFSGsg.png',
     'https://i.imgur.com/6YDjjtp.png',
     'https://i.imgur.com/Uj7NyNE.png',
