@@ -15,7 +15,7 @@ function App() {
       .then((results) => {
       setPotions(results as Potions[])
       })
-  })
+  }, [])
 
   return (
     <div className="App">
