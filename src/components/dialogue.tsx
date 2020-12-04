@@ -26,7 +26,7 @@ const Dialogue = ({updateShopkeep}: any) => {
     }
   }
 
-
+  
 
   return (
     <div className="dialogue-box">
