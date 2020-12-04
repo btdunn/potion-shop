@@ -7,14 +7,13 @@ import {Potions} from './types'
 
 function App() {
 
-  const [potions, setPotions] = useState()
+  const [potions, setPotions] = useState<Potions[]>([])
 
   useEffect(() => {
     fetch('http://localhost:3000/potions')
       .then(response => response.json())
       .then(({results}) => {
-      setPotions(results as Potions)
-      // console.log(results[0])
+      setPotions(results as Potions[])
       })
   })
 
