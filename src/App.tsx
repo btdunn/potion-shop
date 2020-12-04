@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     fetch('http://localhost:3000/potions')
       .then(response => response.json())
-      .then(({results}) => {
+      .then((results) => {
       setPotions(results as Potions[])
       })
   })
