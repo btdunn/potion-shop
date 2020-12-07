@@ -3,14 +3,28 @@ import '../App.css';
 
 const Shelves = ({potions}) => {
   
-  let randomPotion1 = potions[Math.floor(Math.random() * potions.length)];
-  let randomPotion2 = potions[Math.floor(Math.random() * potions.length)];
-  let randomPotion3 = potions[Math.floor(Math.random() * potions.length)];
+  const [isShown, setIsShown] = useState(false)
+
+  const randomPotion1 = potions[Math.floor(Math.random() * potions.length)];
+  const randomPotion2 = potions[Math.floor(Math.random() * potions.length)];
+  const randomPotion3 = potions[Math.floor(Math.random() * potions.length)];
 
   return (
     <div className="shelves">
       <div className="spot1">
-        <img className="potion" src={randomPotion1.name} alt="potion"/>
+        <img 
+        onMouseEnter={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)}
+        className="potion" 
+        src={randomPotion1.name} 
+        alt="potion"
+        />
+        {isShown && (
+          <div className="potionInfo">
+            <p>{randomPotion1.description}</p>
+            <p>Price: {randomPotion1.price}</p>
+          </div>
+        )}
       </div>
       <div className="spot2">
         <img className="potion" src={randomPotion2.name} alt="potion"/>
