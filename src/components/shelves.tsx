@@ -1,25 +1,37 @@
-import React, {useState} from 'react'
+import { format } from 'path';
+import React, {useState, useEffect} from 'react'
 import '../App.css';
+import {RandomPotion} from '../types'
 
 const Shelves = ({potions}) => {
   
-  const [isShown, setIsShown] = useState(false)
+  const [randomPotions, setRandomPotions] = useState<RandomPotion[]>([])
 
-  const randomPotion1 = potions[Math.floor(Math.random() * potions.length)];
-  const randomPotion2 = potions[Math.floor(Math.random() * potions.length)];
-  const randomPotion3 = potions[Math.floor(Math.random() * potions.length)];
-
+  useEffect(() => {
+    let randomPotion1 = potions[Math.floor(Math.random() * potions.length)];
+    let randomPotion2 = potions[Math.floor(Math.random() * potions.length)];
+    let randomPotion3 = potions[Math.floor(Math.random() * potions.length)];
+    let storage: RandomPotion[] = []
+    storage.push(randomPotion1, randomPotion2, randomPotion3)
+    setRandomPotions(storage)
+  }, [])
+  console.log(randomPotions)
+  
+  const [isShown1, setIsShown1] = useState(false)
+  const [isShown2, setIsShown2] = useState(false)
+  const [isShown3, setIsShown3] = useState(false)
+  
   return (
     <div className="shelves">
-      <div className="spot1">
+      {/* <div className="spot1">
         <img 
-        onMouseEnter={() => setIsShown(true)}
-        onMouseLeave={() => setIsShown(false)}
+        onMouseEnter={() => setIsShown1(true)}
+        onMouseLeave={() => setIsShown1(false)}
         className="potion" 
         src={randomPotion1.name} 
         alt="potion"
         />
-        {isShown && (
+        {isShown1 && (
           <div className="potionInfo">
             <p>{randomPotion1.description}</p>
             <p>Price: {randomPotion1.price}</p>
@@ -27,11 +39,35 @@ const Shelves = ({potions}) => {
         )}
       </div>
       <div className="spot2">
-        <img className="potion" src={randomPotion2.name} alt="potion"/>
+        <img 
+        onMouseEnter={() => setIsShown2(true)}
+        onMouseLeave={() => setIsShown2(false)}
+        className="potion" 
+        src={randomPotion2.name} 
+        alt="potion"
+        />
+        {isShown2 && (
+          <div className="potionInfo">
+            <p>{randomPotion2.description}</p>
+            <p>Price: {randomPotion2.price}</p>
+          </div>
+        )}
       </div>
       <div className="spot3">
-        <img className="potion" src={randomPotion3.name} alt="potion"/>
-      </div>
+        <img 
+        onMouseEnter={() => setIsShown3(true)}
+        onMouseLeave={() => setIsShown3(false)}
+        className="potion" 
+        src={randomPotion3.name} 
+        alt="potion"
+        />
+        {isShown3 && (
+          <div className="potionInfo">
+            <p>{randomPotion3.description}</p>
+            <p>Price: {randomPotion3.price}</p>
+          </div>
+        )}
+      </div> */}
       <div className="recolor"></div>
 
     </div>
