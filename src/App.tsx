@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import './App.css';
 import Shopkeeper from './components/shopkeeper'
 import Satchel from './components/satchel'
+import Shelves from './components/shelves'
 import {Potions} from './types'
 
 
@@ -19,10 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="shelves">
-      <div className="recolor"></div>
-
-      </div>
+      <Shelves />
       <div className="right-container">
         <Satchel />
         <Shopkeeper />
