@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <Shelves />
+      <Shelves potions = {potions} />
       <div className="right-container">
         <Satchel />
         <Shopkeeper />
