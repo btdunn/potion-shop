@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <Shelves potions = {potions} />
+      {potions.length > 0 ? <Shelves potions = {potions} /> : null}
       <div className="right-container">
         <Satchel />
         <Shopkeeper />
