@@ -15,7 +15,6 @@ const Shelves = ({potions}) => {
     storage.push(randomPotion1, randomPotion2, randomPotion3)
     setRandomPotions(storage)
   }, [])
-  console.log(randomPotions)
   
   const [isShown1, setIsShown1] = useState(false)
   const [isShown2, setIsShown2] = useState(false)
@@ -23,18 +22,20 @@ const Shelves = ({potions}) => {
   
   return (
     <div className="shelves">
-      {/* <div className="spot1">
-        <img 
-        onMouseEnter={() => setIsShown1(true)}
-        onMouseLeave={() => setIsShown1(false)}
-        className="potion" 
-        src={randomPotion1.name} 
-        alt="potion"
-        />
+      <div className="spot1">
+        {randomPotions.length > 0 ? 
+          <img 
+          onMouseEnter={() => setIsShown1(true)}
+          onMouseLeave={() => setIsShown1(false)}
+          className="potion" 
+          src={randomPotions[0].name} 
+          alt="potion"
+          />
+        : null }
         {isShown1 && (
           <div className="potionInfo">
-            <p>{randomPotion1.description}</p>
-            <p>Price: {randomPotion1.price}</p>
+            <p>{randomPotions[0].description}</p>
+            <p>Price: {randomPotions[0].price}</p>
           </div>
         )}
       </div>
@@ -43,13 +44,13 @@ const Shelves = ({potions}) => {
         onMouseEnter={() => setIsShown2(true)}
         onMouseLeave={() => setIsShown2(false)}
         className="potion" 
-        src={randomPotion2.name} 
+        src={randomPotions[1].name} 
         alt="potion"
         />
         {isShown2 && (
           <div className="potionInfo">
-            <p>{randomPotion2.description}</p>
-            <p>Price: {randomPotion2.price}</p>
+            <p>{randomPotions[1].description}</p>
+            <p>Price: {randomPotions[1].price}</p>
           </div>
         )}
       </div>
@@ -58,16 +59,16 @@ const Shelves = ({potions}) => {
         onMouseEnter={() => setIsShown3(true)}
         onMouseLeave={() => setIsShown3(false)}
         className="potion" 
-        src={randomPotion3.name} 
+        src={randomPotions[2].name} 
         alt="potion"
         />
         {isShown3 && (
           <div className="potionInfo">
-            <p>{randomPotion3.description}</p>
-            <p>Price: {randomPotion3.price}</p>
+            <p>{randomPotions[2].description}</p>
+            <p>Price: {randomPotions[2].price}</p>
           </div>
         )}
-      </div> */}
+      </div>
       <div className="recolor"></div>
 
     </div>
