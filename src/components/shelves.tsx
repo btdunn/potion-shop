@@ -40,13 +40,15 @@ const Shelves = ({potions}) => {
         )}
       </div>
       <div className="spot2">
-        <img 
-        onMouseEnter={() => setIsShown2(true)}
-        onMouseLeave={() => setIsShown2(false)}
-        className="potion" 
-        src={randomPotions[1].name} 
-        alt="potion"
-        />
+        {randomPotions.length > 0 ? 
+          <img 
+          onMouseEnter={() => setIsShown2(true)}
+          onMouseLeave={() => setIsShown2(false)}
+          className="potion" 
+          src={randomPotions[1].name} 
+          alt="potion"
+          />
+          : null }
         {isShown2 && (
           <div className="potionInfo">
             <p>{randomPotions[1].description}</p>
@@ -55,13 +57,15 @@ const Shelves = ({potions}) => {
         )}
       </div>
       <div className="spot3">
-        <img 
-        onMouseEnter={() => setIsShown3(true)}
-        onMouseLeave={() => setIsShown3(false)}
-        className="potion" 
-        src={randomPotions[2].name} 
-        alt="potion"
-        />
+        {randomPotions.length > 0 ?
+          <img 
+          onMouseEnter={() => setIsShown3(true)}
+          onMouseLeave={() => setIsShown3(false)}
+          className="potion" 
+          src={randomPotions[2].name} 
+          alt="potion"
+          />
+        : null }
         {isShown3 && (
           <div className="potionInfo">
             <p>{randomPotions[2].description}</p>
