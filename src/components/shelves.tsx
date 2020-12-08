@@ -30,6 +30,7 @@ const Shelves = ({potions}) => {
           className="potion" 
           src={randomPotions[0].name} 
           alt="potion"
+          draggable
           />
         : null }
         {isShown1 && (
@@ -47,6 +48,7 @@ const Shelves = ({potions}) => {
           className="potion" 
           src={randomPotions[1].name} 
           alt="potion"
+          draggable
           />
           : null }
         {isShown2 && (
@@ -64,6 +66,7 @@ const Shelves = ({potions}) => {
           className="potion" 
           src={randomPotions[2].name} 
           alt="potion"
+          draggable
           />
         : null }
         {isShown3 && (
