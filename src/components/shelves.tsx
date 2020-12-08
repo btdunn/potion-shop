@@ -1,5 +1,6 @@
 import { format } from 'path';
 import React, {useState, useEffect} from 'react'
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
 import '../App.css';
 import {RandomPotion} from '../types'
 
@@ -22,57 +23,69 @@ const Shelves = ({potions}) => {
   
   return (
     <div className="shelves">
-      <div className="spot1">
-        {randomPotions.length > 0 ? 
-          <img 
-          onMouseEnter={() => setIsShown1(true)}
-          onMouseLeave={() => setIsShown1(false)}
-          className="potion" 
-          src={randomPotions[0].name} 
-          alt="potion"
-          />
-        : null }
-        {isShown1 && (
-          <div className="potionInfo">
-            <p>{randomPotions[0].description}</p>
-            <p>Price: {randomPotions[0].price}</p>
+      <DragDropContext>
+        <Droppable droppableId="potions">
+          {(provided) => (
+          <div className="spot1" {...provided.droppableProps} ref="provided.innerRef">
+            {randomPotions.length > 0 ? 
+              <Draggable>
+              <img 
+              onMouseEnter={() => setIsShown1(true)}
+              onMouseLeave={() => setIsShown1(false)}
+              className="potion" 
+              src={randomPotions[0].name} 
+              alt="potion"
+              />
+              </Draggable>
+            : null }
+            {isShown1 && (
+              <div className="potionInfo">
+                <p>{randomPotions[0].description}</p>
+                <p>Price: {randomPotions[0].price}</p>
+              </div>
+            )}
           </div>
-        )}
-      </div>
-      <div className="spot2">
-        {randomPotions.length > 0 ? 
-        <img 
-        onMouseEnter={() => setIsShown2(true)}
-        onMouseLeave={() => setIsShown2(false)}
-        className="potion" 
-        src={randomPotions[1].name} 
-        alt="potion"
-        />
-        : null }
-        {isShown2 && (
-          <div className="potionInfo">
-            <p>{randomPotions[1].description}</p>
-            <p>Price: {randomPotions[1].price}</p>
+          <div className="spot2" {...provided.droppableProps} ref="provided.innerRef">
+            {randomPotions.length > 0 ? 
+            <Draggable>
+            <img 
+            onMouseEnter={() => setIsShown2(true)}
+            onMouseLeave={() => setIsShown2(false)}
+            className="potion" 
+            src={randomPotions[1].name} 
+            alt="potion"
+            />
+            </Draggable>
+            : null }
+            {isShown2 && (
+              <div className="potionInfo">
+                <p>{randomPotions[1].description}</p>
+                <p>Price: {randomPotions[1].price}</p>
+              </div>
+            )}
           </div>
-        )}
-      </div>
-      <div className="spot3">
-        {randomPotions.length > 0 ? 
-        <img 
-        onMouseEnter={() => setIsShown3(true)}
-        onMouseLeave={() => setIsShown3(false)}
-        className="potion" 
-        src={randomPotions[2].name} 
-        alt="potion"
-        />
-        : null }
-        {isShown3 && (
-          <div className="potionInfo">
-            <p>{randomPotions[2].description}</p>
-            <p>Price: {randomPotions[2].price}</p>
+          <div className="spot3" {...provided.droppableProps} ref="provided.innerRef">
+            {randomPotions.length > 0 ? 
+            <Draggable>
+            <img 
+            onMouseEnter={() => setIsShown3(true)}
+            onMouseLeave={() => setIsShown3(false)}
+            className="potion" 
+            src={randomPotions[2].name} 
+            alt="potion"
+            />
+            </Draggable>
+            : null }
+            {isShown3 && (
+              <div className="potionInfo">
+                <p>{randomPotions[2].description}</p>
+                <p>Price: {randomPotions[2].price}</p>
+              </div>
+            )}
           </div>
-        )}
-      </div>
+          )}
+        </Droppable>
+      </DragDropContext>
       <div className="recolor"></div>
 
     </div>
