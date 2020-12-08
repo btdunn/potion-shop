@@ -1,5 +1,5 @@
 import { format } from 'path';
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, MouseEvent} from 'react'
 import '../App.css';
 import {RandomPotion} from '../types'
 
@@ -20,6 +20,11 @@ const Shelves = ({potions}) => {
   const [isShown2, setIsShown2] = useState(false)
   const [isShown3, setIsShown3] = useState(false)
   
+  const selectItem = (event) => {
+    // event.dataTransfer
+    console.log("got")
+  }
+
   return (
     <div className="shelves">
       <div className="spot1">
@@ -31,6 +36,7 @@ const Shelves = ({potions}) => {
           src={randomPotions[0].name} 
           alt="potion"
           draggable
+          onDragStart = {(event: MouseEvent) => {selectItem(event)}}
           />
         : null }
         {isShown1 && (

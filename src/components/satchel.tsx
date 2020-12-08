@@ -7,7 +7,7 @@ const Satchel = () => {
 
 
   const selectItem = () => {
-    
+    console.log("bag")
   }
 
   return (
