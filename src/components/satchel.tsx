@@ -5,19 +5,26 @@ const Satchel = () => {
 
   const [contents, setContents] = useState([])
 
+  const [satchelClass, setSatchelClass] = useState('satchel')
 
   const selectItem = () => {
-    console.log("bag")
+    if(satchelClass == 'satchel'){
+      setSatchelClass('satchelHover')
+    }
+    else{
+      setSatchelClass('satchel')
+    }
   }
 
   return (
     <div className="cart">
       <h1 className="sign">Masterful Mixtures</h1>
       <img 
-      className="satchel" 
+      className={satchelClass}
       src="https://www.flaticon.com/svg/static/icons/svg/2743/2743998.svg" 
       alt="satchel"
       onDragOver={(event: MouseEvent) => {selectItem()}}
+      // onDragExit={(event: MouseEvent) => {}}
       />
       <img className="cart-overlay" src="https://i.imgur.com/Mm49f5v.jpg" alt="wood"/>
   </div>
