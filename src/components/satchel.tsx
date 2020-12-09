@@ -24,7 +24,6 @@ const Satchel = () => {
       src="https://www.flaticon.com/svg/static/icons/svg/2743/2743998.svg" 
       alt="satchel"
       onDragOver={(event: MouseEvent) => {selectItem()}}
-      // onDragExit={(event: MouseEvent) => {}}
       />
       <img className="cart-overlay" src="https://i.imgur.com/Mm49f5v.jpg" alt="wood"/>
   </div>
