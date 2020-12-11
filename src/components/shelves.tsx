@@ -21,7 +21,6 @@ const Shelves = ({potions}) => {
   const [isShown3, setIsShown3] = useState(false)
   
   const selectItem = (event) => {
-    // event.dataTransfer
     console.log("got")
   }
 
@@ -83,7 +82,6 @@ const Shelves = ({potions}) => {
         )}
       </div>
       <div className="recolor"></div>
-
     </div>
   )
 }
