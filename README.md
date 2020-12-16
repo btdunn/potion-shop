@@ -1,2 +1,2 @@
-### Potion Shop
+### Masterful Mixtures Potion Shop
 
