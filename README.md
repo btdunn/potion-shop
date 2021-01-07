@@ -4,6 +4,6 @@
 
 ## Functionality
 
-## Contact
-
 ## Code Highlights
+
+## Contact
