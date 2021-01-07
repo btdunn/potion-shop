@@ -4,4 +4,6 @@
 
 ## Functionality
 
-## Contact 
+## Contact
+
+## Code Highlights
