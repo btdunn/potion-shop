@@ -25,7 +25,7 @@ const Satchel = () => {
       alt="satchel"
       onDragOver={(event: MouseEvent) => {selectItem()}}
       />
-      <img className="cart-overlay" src="https://i.imgur.com/Mm49f5v.jpg" alt="wood"/>
+      <img className="cart-overlay" src="https://i.imgur.com/Mm49f5v.jpg" alt="wood-overlay"/>
   </div>
   )
 }
