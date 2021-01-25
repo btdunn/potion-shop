@@ -21,7 +21,7 @@ const Shelves = ({potions}) => {
   const [isShown3, setIsShown3] = useState(false)
   
   const selectItem = (event) => {
-    console.log("got it, dragged")
+    console.log("got it, dragging")
   }
 
   return (
