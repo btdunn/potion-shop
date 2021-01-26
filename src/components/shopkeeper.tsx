@@ -28,7 +28,7 @@ const Shopkeep = () => {
 
   return (
   <div className="shopkeep-container">
-    <img className="shopkeep" src={shopkeeper[shopkeeperCounter]} alt=""/>
+    <img className="shopkeep" src={shopkeeper[shopkeeperCounter]} alt="shopkeeper"/>
     <Dialogue updateShopkeep = {updateShopkeep}/>
   </div>
 
