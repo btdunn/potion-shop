@@ -1,6 +1,6 @@
 ### Masterful Mixtures Potion Shop
 
-Ongoing typescript project with drag and drop randomly generated potions (WIP)
+Ongoing typescript project with drag and drop randomly generated potions (WIP) and visual novel elements.
 
 ## About
 
