@@ -4,7 +4,7 @@ Ongoing typescript project with drag and drop randomly generated potions and vis
 
 ## About
 
-Potions
+Potions!
 
 ## Functionality
 
