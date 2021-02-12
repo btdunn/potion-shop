@@ -8,6 +8,8 @@ Potions!
 
 ## Functionality
 
+TS, React
+
 ## Code Highlights
 
 Soon!
